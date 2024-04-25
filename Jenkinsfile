@@ -9,17 +9,17 @@ pipeline {
     stages {
      stage('build') {
         steps {
-     echo  $BUILD
+     echo  ${BUILD}
        }
      }
      stage('test') {
-    steps {
-     echo $TEST
+       steps {
+        echo ${TEST}
        }
      }
      stage('prod') {
         steps {
-     echo $PROD
+     echo ${PROD}
         }
      }
 }
