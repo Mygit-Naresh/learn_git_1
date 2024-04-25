@@ -8,6 +8,7 @@ pipeline {
  }
    options {
                 timeout(time: 1, unit: 'minutes') 
+   }
     stages {
      stage('build') {
         steps {
