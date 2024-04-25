@@ -6,6 +6,8 @@ pipeline {
     PROD = "hellow this is prod build"
 
  }
+   options {
+                timeout(time: 1, unit: 'minutes') 
     stages {
      stage('build') {
         steps {
