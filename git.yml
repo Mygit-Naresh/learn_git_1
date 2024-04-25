@@ -5,3 +5,13 @@ Developer-1 is develoing code
 
 Checking how rebase works
 rebase develoing completed
+
+
+adding more dev from rebase branch
+<<<<<<< HEAD
+
+++adding more
+=======
+=======
+
+>>>>>>> 5e867444a56442f46482092668029e2657eacc37
