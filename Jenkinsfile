@@ -38,7 +38,7 @@ pipeline {
    //   }
      stage('PROD_STAGE') {
       when {
-      "${params.choice}" == "PROD"
+       expression { "${params.choice}"  == "PROD" }
     }
        steps {
         echo "${PROD}"
