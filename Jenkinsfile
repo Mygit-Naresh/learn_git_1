@@ -16,27 +16,28 @@ pipeline {
 //         password(defaultValue: "Password", description: "Password Parameter", name: "passwordExample")
 //     }
  parameters {
-      choice(choices: 'ONE\nTWO', description: 'Choose one or two?', name: 'choiceExample')
+      choice(choices: 'PROD\nDEV', description: 'Choose PROD or DEV?', name: 'choice')
  }
    
    options {
-                timeout(time: 1, unit: 'MINUTES') 
+                timeout(time: 1, unit: 'HOURS') 
    }
+
     stages {
    
-     stage('build') {
+     stage('parameters') {
         steps {
-     echo "choiceExample: ${params.choiceExample}"
+     echo "choice: ${params.choice}"
        }
      }
-     stage('test') {
+     stage('PROD') {
        steps {
-        echo "${TEST}"
+        echo "${PROD}"
        }
      }
-     stage('prod') {
+     stage('DEV') {
         steps {
-     echo "${PROD}"
+     echo "${DEV}"
         }
      }
 }
