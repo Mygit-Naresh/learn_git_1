@@ -38,7 +38,7 @@ pipeline {
    //   }
      stage('PROD_STAGE') {
       when {
-        expression { ENV == "PROD" }
+        expression { environment == "PROD" }
 
     }
        steps {
