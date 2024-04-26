@@ -38,7 +38,6 @@ pipeline {
    //   }
      stage('PROD_STAGE') {
       when {
- #      expression { "${params.choice}"  == "PROD" }
         expression { ENV == "PROD" }
 
     }
