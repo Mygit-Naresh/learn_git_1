@@ -6,7 +6,7 @@ pipeline {
     PROD = "hellow this is prod build"
 
  }
- ansiColor('xterm') {
+
 //   parameters {
 //         // booleanParam, choice, file, text, password, run, or string
 //         booleanParam(defaultValue: true, description: '', name: 'booleanExample')
@@ -45,5 +45,4 @@ pipeline {
       echo "final execution"
    }
   }
-}
 }
