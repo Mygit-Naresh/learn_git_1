@@ -2,7 +2,7 @@ pipeline {
  agent any
  environment {
     BUILD = "Hellow this first build"
-    TEST =  "hellow this is test build"
+    DEV =  "hellow this is DEV build"
     PROD = "hellow this is prod build"
 
  }
@@ -25,12 +25,21 @@ pipeline {
 
     stages {
    
-     stage('parameters') {
-        steps {
-     echo "choice: ${params.choice}"
-       }
+   //   stage('parameters') {
+   //      steps {
+   //   echo "choice: ${params.choice}"
+   //     }
+    when {
+      ${params.choice} == "PROD"
+    }
      }
-     stage('PROD') {
+     when {
+      expression = "PROD"
+     }
+     stage('PROD_STAGE') {
+      when {
+      ${params.choice} == "PROD"
+    }
        steps {
         echo "${PROD}"
        }
@@ -46,4 +55,4 @@ pipeline {
       echo "final execution"
    }
   }
-}
+
