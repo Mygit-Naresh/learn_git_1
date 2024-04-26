@@ -33,9 +33,9 @@ pipeline {
       ${params.choice} == "PROD"
     }
      }
-     when {
-      expression = "PROD"
-     }
+   //   when {
+   //    expression = "PROD"
+   //   }
      stage('PROD_STAGE') {
       when {
       ${params.choice} == "PROD"
