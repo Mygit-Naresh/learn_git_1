@@ -29,16 +29,16 @@ pipeline {
    //      steps {
    //   echo "choice: ${params.choice}"
    //     }
-    when {
-      ${params.choice} == "PROD"
-    }
-     }
+   //  when {
+   //    ${params.choice} == "PROD"
+   //  }
+   //   }
    //   when {
    //    expression = "PROD"
    //   }
      stage('PROD_STAGE') {
       when {
-      ${params.choice} == "PROD"
+      "${params.choice}" == "PROD"
     }
        steps {
         echo "${PROD}"
